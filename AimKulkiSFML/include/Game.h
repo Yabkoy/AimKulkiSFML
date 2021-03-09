@@ -9,9 +9,10 @@ private:
 
 	void update();
 
+	void initObjects();
+
 public:
 	Game();
 
 	~Game();
-
 };

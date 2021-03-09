@@ -9,6 +9,11 @@ Game::~Game()
 	delete RW;
 }
 
+void Game::initObjects()
+{
+
+}
+
 void Game::update()
 {
 	while (RW->isOpen())
@@ -19,6 +24,11 @@ void Game::update()
 				RW->close();
 		}
 		RW->clear(sf::Color::Black);
+
+		//for (sf::Shape* : )
+		//{
+
+		//}
 
 		RW->display();
 	}
