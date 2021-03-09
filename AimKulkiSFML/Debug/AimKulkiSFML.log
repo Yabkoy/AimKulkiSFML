@@ -1,0 +1,3 @@
+﻿  Game.cpp
+C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(13,94): warning C4554: '|': check operator precedence for possible error; use parentheses to clarify precedence
+  AimKulkiSFML.vcxproj -> C:\Users\yabus\source\repos\AimKulkiSFML\Debug\AimKulkiSFML.exe
