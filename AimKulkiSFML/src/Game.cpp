@@ -2,7 +2,7 @@
 
 Game::Game()
 {
-	RW = new sf::RenderWindow(sf::VideoMode(800, 600), "Title");
+	RW = new sf::RenderWindow(sf::VideoMode(WIN_W, WIN_H), "Title");
 }
 Game::~Game()
 {
