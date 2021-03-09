@@ -3,7 +3,11 @@
 Game::Game()
 {
 	RW = new sf::RenderWindow(sf::VideoMode(WIN_W, WIN_H), "Title"); //Creating Window and allocating SFML RenderWindow
-	
+	mainShapesPointer.reserve(2);
+	mainShapesPointer.emplace_back(&yourCharacter);
+	mainShapesPointer.emplace_back(&enemyCharacter);
+
+	initObjects(); // initialization Shapes Objects and add arguments
 
 	update(); //start to execute update function
 }
@@ -15,7 +19,15 @@ Game::~Game()
 
 void Game::initObjects()
 {
-
+	for (sf::Shape* curretObejct : mainShapesPointer)
+	{
+		sf::CircleShape* castObject = (sf::CircleShape*)curretObejct;
+		castObject->setRadius(mainRadius);
+		castObject->setPointCount(30);
+		castObject->setOrigin(sf::Vector2f(mainRadius, mainRadius));
+		castObject->setFillColor(sf::Color::Red);
+		castObject->setPosition(sf::Vector2f(WIN_W / 2, WIN_H / 2));
+	}
 }
 
 void Game::update()
@@ -33,6 +45,8 @@ void Game::update()
 		//{
 
 		//}
+
+		RW->draw(yourCharacter);
 
 		RW->display(); //Displaying RenderWindow;
 	}
