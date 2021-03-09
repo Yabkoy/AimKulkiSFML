@@ -1,7 +1,5 @@
 #include "../include/Game.h"
 
-#include "../include/Game.h"
-
 Game::Game()
 {
 	RW = new sf::RenderWindow(sf::VideoMode(800, 600), "Title");
