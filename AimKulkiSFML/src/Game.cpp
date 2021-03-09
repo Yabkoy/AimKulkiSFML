@@ -5,15 +5,11 @@ Game::Game()
 	mainSettings.antialiasingLevel = 8;
 	RW = new sf::RenderWindow(sf::VideoMode(WIN_W, WIN_H), "AddectiveGame", sf::Style::Default, mainSettings); //Creating Window and allocating SFML RenderWindow
 
-
 	mainShapesPointer.reserve(2);
 	mainShapesPointer.emplace_back(&yourCharacter);
 	mainShapesPointer.emplace_back(&enemyCharacter);
 
 	initObjects(); // initialization Shapes Objects and add arguments
-
-
-	// mainFont.loadFromFile("mainFont.otf");
 
 	update(); //start to execute update function
 }
@@ -39,7 +35,11 @@ void Game::initObjects()
 	yourCharacter.setOutlineThickness(5);
 	yourCharacter.setOutlineColor(sf::Color::White);
 
+	if (!mainFont.loadFromFile("mainFont.otf"))
+		std::cout << "Error in font file load!\n";
 
+	pointsText.setFont(mainFont);
+	pointsText.setString("Points: " + std::to_string(mainPoints));
 }
 
 void Game::update()
@@ -63,7 +63,7 @@ void Game::update()
 			enemyCharacter.setPosition(sf::Vector2f(rand() % WIN_W, rand() % WIN_H));
 			enemyCharacter.setFillColor(sf::Color(rand() % 255, rand() % 255, rand() % 255));
 			mainPoints++;
-			pointsText.setString(mainPoints);
+			pointsText.setString("Points: " + std::to_string(mainPoints));
 		}
 			
 		for (sf::Shape* curretObejct : mainShapesPointer) //drawing object loop
