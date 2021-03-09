@@ -3,7 +3,9 @@
 Game::Game()
 {
 	RW = new sf::RenderWindow(sf::VideoMode(WIN_W, WIN_H), "Title");
+	update();
 }
+
 Game::~Game()
 {
 	delete RW;
