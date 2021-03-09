@@ -14,7 +14,7 @@ Game::Game()
 
 Game::~Game()
 {
-	delete RW; //Delete RenderWindow from memory
+	delete RW; //Delete RenderWindow obejct from memory
 }
 
 void Game::initObjects()
@@ -40,6 +40,19 @@ void Game::update()
 				RW->close();
 		}
 		RW->clear(sf::Color::Black); //Clearing background to Black
+
+
+		if (yourCharacter.getGlobalBounds().contains(sf::Mouse::getPosition(*RW).x, sf::Mouse::getPosition(*RW).y) && sf::Mouse::isButtonPressed(sf::Mouse::Left))
+			yourCharacter.setPosition(sf::Vector2f(sf::Mouse::getPosition(*RW).x, sf::Mouse::getPosition(*RW).y));
+
+		if (yourCharacter.getGlobalBounds().intersects(enemyCharacter.getGlobalBounds()))
+		{
+			yourCharacter.setFillColor(sf::Color(rand() % 255, rand() % 255, rand() % 255));
+			enemyCharacter.setPosition(sf::Vector2f(rand() % WIN_W, rand() % WIN_H));
+			enemyCharacter.setFillColor(sf::Color(rand() % 255, rand() % 255, rand() % 255));
+		}
+			
+
 
 		for (sf::Shape* curretObejct : mainShapesPointer) //drawing object loop
 		{
