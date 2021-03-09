@@ -41,12 +41,11 @@ void Game::update()
 		}
 		RW->clear(sf::Color::Black); //Clearing background to Black
 
-		//for (sf::Shape* : )
-		//{
+		for (sf::Shape* curretObejct : mainShapesPointer) //drawing object loop
+		{
+			RW->draw(*curretObejct);
+		}
 
-		//}
-
-		RW->draw(yourCharacter);
 
 		RW->display(); //Displaying RenderWindow;
 	}
