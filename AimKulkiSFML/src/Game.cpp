@@ -8,7 +8,7 @@ Game::Game()
 	mainShapesPointer.emplace_back(&enemyCharacter);
 
 	initObjects(); // initialization Shapes Objects and add arguments
-
+	// mainFont.loadFromFile("mainFont.otf");
 	update(); //start to execute update function
 }
 
@@ -19,6 +19,8 @@ Game::~Game()
 
 void Game::initObjects()
 {
+	mainPoints = 0;
+
 	for (sf::Shape* curretObejct : mainShapesPointer)
 	{
 		sf::CircleShape* castObject = (sf::CircleShape*)curretObejct;
@@ -28,6 +30,9 @@ void Game::initObjects()
 		castObject->setFillColor(sf::Color::Red);
 		castObject->setPosition(sf::Vector2f(WIN_W / 2, WIN_H / 2));
 	}
+	yourCharacter.setOutlineThickness(5);
+	yourCharacter.setOutlineColor(sf::Color::White);
+
 
 }
 
@@ -51,12 +56,15 @@ void Game::update()
 			yourCharacter.setFillColor(sf::Color(rand() % 255, rand() % 255, rand() % 255));
 			enemyCharacter.setPosition(sf::Vector2f(rand() % WIN_W, rand() % WIN_H));
 			enemyCharacter.setFillColor(sf::Color(rand() % 255, rand() % 255, rand() % 255));
+			mainPoints++;
+			pointsText.setString(mainPoints);
 		}
 			
 		for (sf::Shape* curretObejct : mainShapesPointer) //drawing object loop
 		{
 			RW->draw(*curretObejct);
 		}
+		RW->draw(pointsText);
 
 
 		RW->display(); //Displaying RenderWindow;

@@ -1,6 +1,6 @@
 ﻿  Game.cpp
-C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(40,94): warning C4554: '|': check operator precedence for possible error; use parentheses to clarify precedence
-C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(46,106): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(45,94): warning C4554: '|': check operator precedence for possible error; use parentheses to clarify precedence
+C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(51,106): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -9,7 +9,7 @@ C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(46,106): warn
           [
               T=float
           ]
-C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(46,75): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(51,75): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -18,7 +18,7 @@ C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(46,75): warni
           [
               T=float
           ]
-C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(47,101): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(52,101): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -27,7 +27,7 @@ C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(47,101): warn
           [
               T=float
           ]
-C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(47,70): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(52,70): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -36,12 +36,12 @@ C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(47,70): warni
           [
               T=float
           ]
-C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(52,67): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(57,67): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(52,51): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\yabus\source\repos\AimKulkiSFML\AimKulkiSFML\src\Game.cpp(57,51): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float

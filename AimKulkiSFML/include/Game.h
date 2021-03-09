@@ -11,6 +11,11 @@ private: //Game Objects
 	sf::CircleShape yourCharacter;
 	sf::CircleShape enemyCharacter;
 
+	unsigned int mainPoints;
+
+	sf::Font mainFont;
+	sf::Text pointsText;
+
 private: //Private Functions
 	void update();
 
