@@ -3,16 +3,17 @@
 
 class Game
 {
-private:
+private: //Window Initialization
 	sf::RenderWindow* RW; 
 	sf::Event mainEvent;
-
+private: //Game Objects
+		
+private: //Private Functions
 	void update();
 
 	void initObjects();
 
-public:
+public: //Game Constructor and Destructor
 	Game();
-
 	~Game();
 };
