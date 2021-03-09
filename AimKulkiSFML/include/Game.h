@@ -7,7 +7,9 @@ private: //Window Initialization
 	sf::RenderWindow* RW; 
 	sf::Event mainEvent;
 private: //Game Objects
-		
+	sf::CircleShape yourCharacter;
+	sf::CircleShape enemyCharacter;
+
 private: //Private Functions
 	void update();
 

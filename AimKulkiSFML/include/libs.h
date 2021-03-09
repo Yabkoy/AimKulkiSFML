@@ -5,3 +5,5 @@
 
 #define WIN_W 1000 // width of window
 #define WIN_H 1000 // height of window
+
+#define mainRadius 50 // radius for all circles
