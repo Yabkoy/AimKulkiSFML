@@ -6,6 +6,7 @@ class Game
 private: //Window Initialization
 	sf::RenderWindow* RW; 
 	sf::Event mainEvent;
+	sf::ContextSettings mainSettings;
 	std::vector<sf::Shape*> mainShapesPointer;
 private: //Game Objects
 	sf::CircleShape yourCharacter;

@@ -2,13 +2,19 @@
 
 Game::Game()
 {
-	RW = new sf::RenderWindow(sf::VideoMode(WIN_W, WIN_H), "AddectiveGame"); //Creating Window and allocating SFML RenderWindow
+	mainSettings.antialiasingLevel = 8;
+	RW = new sf::RenderWindow(sf::VideoMode(WIN_W, WIN_H), "AddectiveGame", sf::Style::Default, mainSettings); //Creating Window and allocating SFML RenderWindow
+
+
 	mainShapesPointer.reserve(2);
 	mainShapesPointer.emplace_back(&yourCharacter);
 	mainShapesPointer.emplace_back(&enemyCharacter);
 
 	initObjects(); // initialization Shapes Objects and add arguments
+
+
 	// mainFont.loadFromFile("mainFont.otf");
+
 	update(); //start to execute update function
 }
 
